@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+    <link rel="stylesheet" href="static\css\index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Summarizer</h1>
+        <form method="POST" action="/analyse">
+            <input type="text" name="article_text" id="article_text" placeholder="Enter the article you wish to summarize">
+            <button type="submit">Summarize</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <h1>URL Analyzer</h1>
+        <form method="POST" action="/analyze_url">
+            <input type="text" name="raw_url" id="raw_url" placeholder="Enter the URL of the article you wish to summarize">
+            <button type="submit">Analyze URL</button>
+        </form>
+    </div>
+
+    <!-- Result Display-->
+  <section class="section section-solutions-about grey darken-2">
+    <div class="container white-text">
+    
+         <!--   Icon Section   -->
+         <div class="row">
+           <div class="col s12 m6">
+             <div class="icon-block">
+               <h5 class="center">Your Text</h5>
+               <p class="light">{{ctext}}</p>                
+           </div>
+             </div>
+           </div>
+   
+           <div class="col s12 m6 grey darken-3">
+             <div class="icon-block">
+               <h5 class="center">Summarized</h5>
+            </div>
+               <p class="light">{{ final_summary }}</p>
+             
+             </div>
+           </div>
+   
+         </div>
+   
+     
+     </div>
+   </section>
+</body>
+</html>
